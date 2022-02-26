@@ -37,7 +37,7 @@ public:
      }
    };
 
-   Matrix(const vector<vector<int>> &newMatrix) {
+   Matrix(const vector<vector<int>> &newMatrix) { //constructor en base a un vector de vectores
      imp_ = nullptr;
      n = newMatrix.size(); 
      m = newMatrix[0].size();
@@ -50,17 +50,18 @@ public:
      }
    };
 
-   ~Matrix(){
+   ~Matrix(){ //destructor
      delete this->imp_;
    }
 
-   int getN() {return n;}
-   int getM() {return m;}
+   //getters 
+   int getN() {return n;} //numero de filas
+   int getM() {return m;} //numero de columnas
 
    int getN() const {return n;}
    int getM() const {return m;}
 
-   vector<vector<int>> getMatrix() {
+   vector<vector<int>> getMatrix() { //devuelve el vector que almacena la matriz
      return matrix;
    }
 
@@ -68,7 +69,7 @@ public:
      return matrix;
    }
 
-   Strategy* getStrategy() {
+   Strategy* getStrategy() { //devuelve el puntero a la estrategia
      return imp_;
    }
    Strategy* getStrategy() const {
