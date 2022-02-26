@@ -1,4 +1,4 @@
-Tamaño,Row Product Time microseconds,Row column Time microseconds
+Tamaño,Row Product Time microseconds,Column Product Time microseconds
 110x110,13001,12031
 210x210,87997,86028
 310x310,291042,280032

@@ -8,7 +8,7 @@ time_t t;
 srand((unsigned) time(&t));
 
 std::ofstream csv; 
-csv.open ("comparative.csv"); //abrimos o creamos el archivo.csv
+csv.open ("comparative2.csv"); //abrimos o creamos el archivo.csv
 csv << "Tamaño,Row Product Time microseconds,Column Product Time microseconds\n"; //columnas del csv
 
 int n = 10; //inicializamos el numero de filas (n) y columnas(m)
@@ -22,7 +22,7 @@ while(n < 2010) { // 2010 es el valor que ha mi me ha parecido a partir del cual
 
     cout << "Multiplying matrices of dimensions " << n << "*" << m << " : " << endl; 
 
-    matriz1.setStrategy(new RowProduct());
+    matriz1.setStrategy(new RowProduct()); //establecemos el algoritmo de multiplicacion
     matriz2.setStrategy(new RowProduct());
 
     auto start1 = chrono::high_resolution_clock::now(); //empezamos el chrono
